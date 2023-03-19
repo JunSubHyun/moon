@@ -1,7 +1,7 @@
 package study.moon.book0317Ex;
 
 import study.moon.book0317Ex.join.Join;
-import study.moon.user.joinDto.JoinDto;
+import study.moon.book0317Ex.user.joinDto.JoinDto;
 
 public abstract class User {
 

@@ -1,4 +1,4 @@
-package study.moon.user.joinDto;
+package study.moon.book0317Ex.user.joinDto;
 
 import lombok.Data;
 

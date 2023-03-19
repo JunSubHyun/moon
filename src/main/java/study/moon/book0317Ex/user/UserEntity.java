@@ -1,7 +1,7 @@
-package study.moon.user;
+package study.moon.book0317Ex.user;
 
-import study.moon.user.joinDto.JoinDto;
-import study.moon.user.joinDto.Type;
+import study.moon.book0317Ex.user.joinDto.JoinDto;
+import study.moon.book0317Ex.user.joinDto.Type;
 
 public class UserEntity {
 

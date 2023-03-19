@@ -1,7 +1,6 @@
 package study.moon.book0317Ex.join;
 
-import study.moon.user.UserEntity;
-import study.moon.user.joinDto.JoinDto;
+import study.moon.book0317Ex.user.joinDto.JoinDto;
 
 public interface Join {
 

@@ -1,8 +1,7 @@
 package study.moon.book0317Ex;
 
-import study.moon.user.UserEntity;
-import study.moon.user.joinDto.JoinDto;
-import study.moon.user.joinDto.Type;
+import study.moon.book0317Ex.user.joinDto.JoinDto;
+import study.moon.book0317Ex.user.joinDto.Type;
 
 public class JoinController extends User{
 

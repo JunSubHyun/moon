@@ -1,11 +1,10 @@
 package study.moon.book0317Ex;
 
 import org.junit.jupiter.api.AfterEach;
-import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
-import study.moon.user.joinDto.JoinDto;
-import study.moon.user.joinDto.Type;
+import study.moon.book0317Ex.user.joinDto.JoinDto;
+import study.moon.book0317Ex.user.joinDto.Type;
 
 @SpringBootTest
 class UserTest {
