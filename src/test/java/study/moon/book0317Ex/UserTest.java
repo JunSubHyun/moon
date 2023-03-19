@@ -1,5 +1,7 @@
 package study.moon.book0317Ex;
 
+import org.junit.jupiter.api.AfterEach;
+import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 import study.moon.user.joinDto.JoinDto;
@@ -7,6 +9,11 @@ import study.moon.user.joinDto.Type;
 
 @SpringBootTest
 class UserTest {
+
+    @AfterEach
+    void init(){
+        System.out.println("=================================");
+    }
 
     @Test
     void Test(){
