@@ -1,9 +1,5 @@
 package study.moon.user;
 
-import study.moon.book0317Ex.Adult;
-import study.moon.book0317Ex.Children;
-import study.moon.book0317Ex.Foreigner;
-import study.moon.book0317Ex.Join;
 import study.moon.user.joinDto.JoinDto;
 import study.moon.user.joinDto.Type;
 

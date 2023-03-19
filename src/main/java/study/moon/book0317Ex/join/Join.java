@@ -1,4 +1,4 @@
-package study.moon.book0317Ex;
+package study.moon.book0317Ex.join;
 
 import study.moon.user.UserEntity;
 import study.moon.user.joinDto.JoinDto;
