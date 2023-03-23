@@ -15,7 +15,7 @@ public class UserEntity {
 
     public void typeJoin(JoinDto joinDto){
         if(joinDto.getType().equals(Type.children)){
-            childrenUserEntity(joinDto);
+            childrenEntity(joinDto);
         }else if(joinDto.getType().equals(Type.adult)){
             adultEntity(joinDto);
         }else if(joinDto.getType().equals(Type.foreigner)){
@@ -23,7 +23,7 @@ public class UserEntity {
         }
     }
 
-    public void childrenUserEntity(JoinDto joinDto){
+    public void childrenEntity(JoinDto joinDto){
         this.name = joinDto.getName();
         this.cell = joinDto.getCell();
         this.parentsAgree = joinDto.getParentsAgree();
