@@ -1,4 +1,4 @@
-package study.moon.book0424;
+package study.moon.book0422;
 
 public enum State {
     //사용 , 휴먼, 탈퇴
