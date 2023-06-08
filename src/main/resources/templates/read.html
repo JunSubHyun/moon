@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="ko" xmlns:th="http://www.thymeleaf.org" xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
+<th:block layout:fragment="title">
+    <title>this is list page</title>
+</th:block>
+
+<th:block layout:fragment="content">
+    <div class="table-responsive clearfix">
+        <div th:unless="${data == null}">
+            <p>성함 : <span th:text="${data.employeeName}"></span></p>
+            <p>사원번호 : <span th:text="${data.employeeNumber}"></span></p>
+            <p>급여 : <span th:text="${data.money}"></span></p>
+            <p>상태 : <span th:text="${data.state}"></span></p>
+        </div>
+
+        <div th:unless="${data != null}">
+            <p>Data not found</p>
+        </div>
+
+        <div class="btn_wrap text-right">
+          <a th:href="@{/write}" class="btn btn-primary waves-effect waves-light">입력</a>
+      </div>
+    </div>
+</th:block>
+</html>
