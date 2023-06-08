@@ -18,7 +18,9 @@
         </div>
 
         <div class="btn_wrap text-right">
-          <a th:href="@{/write}" class="btn btn-primary waves-effect waves-light">입력</a>
+          <a th:href="@{/sign/{id}(id=${data.accountId})}" class="btn btn-primary waves-effect waves-light">사인</a>
+          <a th:href="@{/back/{id}(id=${data.accountId})}" class="btn btn-primary waves-effect waves-light">보류</a>
+          <a th:href="@{/deposit/{id}(id=${data.accountId})}" class="btn btn-primary waves-effect waves-light">재결재</a>
       </div>
     </div>
 </th:block>

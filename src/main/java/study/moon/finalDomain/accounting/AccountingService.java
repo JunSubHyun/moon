@@ -2,6 +2,7 @@ package study.moon.finalDomain.accounting;
 
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 import study.moon.finalDomain.accounting.dto.AccountingRequest;
 import study.moon.finalDomain.accounting.dto.AccountingResponse;
 import study.moon.finalDomain.accounting.repository.AccountingRepository;
@@ -26,6 +27,7 @@ public class AccountingService {
         return list;
     }
 
+    @Transactional
     public Long save(AccountingRequest accountingRequest){
 
         Employee employee = employeeRepository.findById(accountingRequest.getEmployeeId()).get();
@@ -42,12 +44,34 @@ public class AccountingService {
         Employee employee = employeeRepository.findById(accounting.getEmployee().getId()).get();
 
         AccountingResponse accountingResponse = new AccountingResponse();
+        accountingResponse.setAccountId(id);
         accountingResponse.setEmployeeName(employee.getName());
         accountingResponse.setMoney(accounting.getMoney());
         accountingResponse.setEmployeeNumber(employee.getEmployeeNumber());
         accountingResponse.setState(accounting.getState());
 
         return accountingResponse;
+    }
+
+    @Transactional
+    public Accounting signAccounting(Long id){
+        Accounting accounting = accountingRepository.findById(id).get();
+        accounting.stateUpdate( accounting, State.sign);
+        return accounting;
+    }
+
+    @Transactional
+    public Accounting backAccounting(Long id){
+        Accounting accounting = accountingRepository.findById(id).get();
+        accounting.stateUpdate( accounting, State.back);
+        return accounting;
+    }
+
+    @Transactional
+    public Accounting depositAccounting(Long id){
+        Accounting accounting = accountingRepository.findById(id).get();
+        accounting.stateUpdate( accounting, State.deposit);
+        return accounting;
     }
 
 }

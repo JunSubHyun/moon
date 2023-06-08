@@ -33,6 +33,13 @@ public class Accounting implements AccountingState{
         this.employee = employee;
     }
 
+    public void stateUpdate(final Accounting accounting, State state) {
+        this.id = accounting.getId();
+        this.money = accounting.getMoney();
+        this.state = state;
+    }
+
+
     @Override
     public void sing(Accounting accounting) {
         this.state = State.sign;

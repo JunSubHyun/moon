@@ -36,6 +36,24 @@ public class AccountingController {
         return "read";
     }
 
+    @GetMapping("/sign/{id}")
+    public String sign(@PathVariable Long id){
+        accountingService.signAccounting(id);
+        return  "redirect:/read/"+id;
+    }
+
+    @GetMapping("/back/{id}")
+    public String back(@PathVariable Long id){
+        accountingService.backAccounting(id);
+        return  "redirect:/read/"+id;
+    }
+
+    @GetMapping("/deposit/{id}")
+    public String deposit(@PathVariable Long id){
+        accountingService.depositAccounting(id);
+        return  "redirect:/read/"+id;
+    }
+
 
 }
 
