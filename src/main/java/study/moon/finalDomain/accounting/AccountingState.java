@@ -5,4 +5,5 @@ public interface AccountingState {
     void sing(Accounting accounting);
     void back(Accounting accounting);
 
+
 }
